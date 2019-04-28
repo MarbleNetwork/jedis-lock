@@ -1,0 +1,20 @@
+language: java
+script: mvn install
+jobs:
+  include:
+  - stage: bintray-deploy
+    deploy:
+      provider: script
+      script: cp .travis.settings.xml $HOME/.m2/settings.xml && mvn deploy
+      skip_cleanup: true
+      on:
+        tags: true
+  - stage: github-deploy
+    deploy:
+      provider: releases
+      api_key:
+        secure: QhtlN1ozIdYaBB3tXQsm5DBkZdNH8jusNIaiE/9GCJ1JYkXzzozEg3ALUTW9ahH9EPgshAMDFmgh9kmjiPbev7zUCIHSjtpQyhBqnKBZRZyiGeBrDhGcBBojViib+WDMYXa0538uM0B4VrCS1sjY3hImQWMVaK/uYEcq50/eAXeoNkhOc/+odMR9CIEsC7DfTbenhKODGznoAdFYBXZ8Mc/MFbGxB8FiUhoIt68FVfYxtkwlS+S50CAOWLmmZTnCizHqpEvJY+oEh5e71pHAFbR9rl5GcIHjL+FodMznA4/jTFv9IQyMTJ1ijNYNfo2nihGaAnoW5oFj1KSsPcAdNHdxksegemeJWP/+zVs0EGUOgQpFvrFMWJv2HRoSn88eO0aM4+moFSKYBxdiNCJOcetr4fLoKk4X7aelhECSd1VzmziQdEIoxnW12Hg6xwJbSLlYOyP5ILA7Sryi5Xq/rors4nsC8DehpQIfGgUAwjYHkJdgFkQMYJHxOFFA+yE5Im8avPqQc07qHjS1tTm/1t7TqissCfBKlak5TdRD1rpcTOQGkW55Ejs8XjA7ROC68DYXAZ17Rpk6d8HaWHbVCsk0GqT/uNT7y3yZvb+iV8zxAi0emzCYGwSacFJsMcbPt0hDBEb8/YssP5NvCGzgBoVOYuCwDQX4I1v1/CtNL8s=
+      file: target/DataAccessLayer.jar
+      skip_cleanup: true
+      on:
+        tags: true
