@@ -6,7 +6,7 @@
 	<artifactId>jedis-lock</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.1</version>
-	<name>Jedis Lock</name>
+	<name>JedisLock</name>
 	<description>Jedis distributed lock support</description>
 	<inceptionYear>2011</inceptionYear>
 
@@ -20,7 +20,7 @@
 
 	<issueManagement>
 		<system>github</system>
-		<url>http://github.com/abelaska/jedis-lock/issues</url>
+		<url>http://github.com/marblenetwork/jedis-lock/issues</url>
 	</issueManagement>
 	
 	<distributionManagement>
@@ -94,6 +94,14 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<finalName>${project.name}</finalName>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

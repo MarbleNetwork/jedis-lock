@@ -8,14 +8,17 @@ You can download the latests build at:
     https://github.com/MarbleNetwork/jedis-lock/releases
 
 Or use it as a maven dependency:
+```
     <repository>
-		<id>MarbleNetwork</id>
-		<url>https://dl.bintray.com/jordanwwood/MarbleNetworkMvn</url>
-		<snapshots>
-			<enabled>true</enabled>
-		</snapshots>
-	</repository>
+        <id>MarbleNetwork</id>
+        <url>https://dl.bintray.com/jordanwwood/MarbleNetworkMvn</url>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+    </repository>
+```
 
+```
     <dependency>
         <groupId>com.github.jedis-lock</groupId>
         <artifactId>jedis-lock</artifactId>
@@ -23,6 +26,7 @@ Or use it as a maven dependency:
         <type>jar</type>
         <scope>compile</scope>
     </dependency>
+```
 
 To use it just:
 
