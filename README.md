@@ -1,4 +1,4 @@
-# Jedis-lock
+# Jedis-lock [![Build Status](https://travis-ci.org/MarbleNetwork/jedis-lock.svg?branch=master)](https://travis-ci.org/MarbleNetwork/jedis-lock) [ ![Download](https://api.bintray.com/packages/jordanwwood/MarbleNetworkMvn/JedisLock/images/download.svg) ](https://bintray.com/jordanwwood/MarbleNetworkMvn/JedisLock/_latestVersion)
 
 Jedis-lock is easy to use and simple implementation of distributed lock using Redis database and Jedis driver.
 
