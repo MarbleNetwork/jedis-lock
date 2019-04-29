@@ -5,14 +5,21 @@ Jedis-lock is easy to use and simple implementation of distributed lock using Re
 ## How do I use it?
 
 You can download the latests build at:
-    http://github.com/abelaska/jedis-lock/downloads
+    https://github.com/MarbleNetwork/jedis-lock/releases
 
 Or use it as a maven dependency:
+    <repository>
+		<id>MarbleNetwork</id>
+		<url>https://dl.bintray.com/jordanwwood/MarbleNetworkMvn</url>
+		<snapshots>
+			<enabled>true</enabled>
+		</snapshots>
+	</repository>
 
     <dependency>
         <groupId>com.github.jedis-lock</groupId>
         <artifactId>jedis-lock</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <type>jar</type>
         <scope>compile</scope>
     </dependency>
