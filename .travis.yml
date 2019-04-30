@@ -1,8 +1,10 @@
 language: java
-script: mvn install
 jobs:
   include:
+  - stage: test
+    script: mvn test
   - stage: bintray-deploy
+    if: tag IS present
     deploy:
       provider: script
       script: cp .travis.settings.xml $HOME/.m2/settings.xml && mvn deploy
@@ -10,6 +12,7 @@ jobs:
       on:
         tags: true
   - stage: github-deploy
+    if: tag IS present
     deploy:
       provider: releases
       api_key:
